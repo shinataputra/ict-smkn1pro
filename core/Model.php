@@ -6,9 +6,9 @@ class Model
     public function __construct()
     {
         $this->db = new PDO(
-            "mysql:host=localhost;dbname=ict_db",
+            "mysql:host=db;dbname=ict_db",
             "root",
-            ""
+            "root"
         );
     }
 }

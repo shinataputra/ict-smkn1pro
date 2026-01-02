@@ -1,0 +1,27 @@
+.
+├── Dockerfile
+├── app
+│   ├── controller
+│   │   ├── AuthController.php
+│   │   ├── DashboardController.php
+│   │   └── PortalController.php
+│   ├── model
+│   │   ├── User.php
+│   │   └── Visitor.php
+│   └── view
+│       ├── dashboard.php
+│       └── portal
+├── config
+├── core
+│   ├── Controller.php
+│   └── Model.php
+├── database
+│   └── migrations
+│       ├── 2025_01_create_table_visitors.sql
+│       └── 2025_03_create_table_user.sql
+├── docker-compose.yml
+├── public
+│   └── index.php
+└── struktur.txt
+
+11 directories, 14 files

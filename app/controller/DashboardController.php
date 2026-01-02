@@ -1,14 +1,17 @@
 <?php
-class DashboardController extends Controller {
-
-    public function index() {
-        $visitor = $this->model("Visitor");
+class DashboardController extends Controller
+{
+    public function index()
+    {
+        if (!isset($_SESSION['user'])) {
+            header('Location: /login');
+            exit;
+        }
 
         $data = [
-            "visitors" => $visitor->todayCount(),
-            "status"   => "Online"
+            'user' => $_SESSION['user']
         ];
 
-        $this->view("dashboard", $data);
+        $this->view('dashboard', $data);
     }
 }
